@@ -15,6 +15,7 @@ files --> a txt file with list of files for which feature extraction is being do
 Change the path in do_world to indicate wav folder directory and the features directory
 
 2) Training and testing with auto_encoder.py
+Modify the file paths
 
 3) Signal reconstruction
 
@@ -27,5 +28,7 @@ Parallel conversion:
 
 1) Repeat the feature extraction steps but change the wav folder to the avearge voice(previously synthesized speech)
 2) train_dnn.py (chnage the accordingly to test on parallel and cross-lingual data)
+Modify the file paths
+
 3) reconstruction
 
