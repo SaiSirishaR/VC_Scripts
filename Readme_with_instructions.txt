@@ -1,4 +1,4 @@
-Steps for the current framework
+Steps
 
 Average voice generation:
 
