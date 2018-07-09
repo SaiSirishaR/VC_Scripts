@@ -21,7 +21,7 @@ out_dim = 60
 encoding_dim = 512
 
 
-test_dir = '/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/final_pred' # path to te prediction folder
+test_dir = # path to te prediction folder
 
 if not os.path.exists(test_dir):
    os.makedirs(test_dir)
