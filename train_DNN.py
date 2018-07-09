@@ -27,10 +27,10 @@ if not os.path.exists(test_dir):
    os.makedirs(test_dir)
 #   os.makedirs(resynth_dir)
 
-input_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/input_full/'))]
-output_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/output_full/'))]
-valid_input_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/valid_input/'))]
-valid_output_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/valid_output/'))]
+input_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/input_full/'))]
+output_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/output_full/'))]
+valid_input_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/valid_input/'))]
+valid_output_files = [filename for filename in sorted(os.listdir('/home3/srallaba/projects/siri_expts/valid_output/'))]
 
 
 
@@ -46,9 +46,9 @@ g = open('valid_files','w')
 
 for i, (valid_input_file, valid_output_file) in enumerate(zip(valid_input_files, valid_output_files)):
 
-      A = np.loadtxt('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/valid_input/' + valid_input_file)
+      A = np.loadtxt('/home3/srallaba/projects/siri_expts/valid_input/' + valid_input_file)
       i_l = len(A)
-      B = np.loadtxt('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/valid_output/' + valid_output_file) 
+      B = np.loadtxt('/home3/srallaba/projects/siri_expts/valid_output/' + valid_output_file) 
       o_l = len(B)
       if i_l == o_l:
          g.write(valid_output_file.split('.')[0] + '\n')
@@ -60,9 +60,9 @@ g.close()
 # Load the training data
 
 for i, (input_file, output_file) in enumerate(zip(input_files, output_files)):
-      A = np.loadtxt('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/input_full/' + input_file) 
+      A = np.loadtxt('/home3/srallaba/projects/siri_expts/input_full/' + input_file) 
       i_l = len(A) 
-      B = np.loadtxt('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/autoencoder_output/output_full/' + output_file) 
+      B = np.loadtxt('/home3/srallaba/projects/siri_expts/output_full/' + output_file) 
       o_l = len(B)
       
       if i_l == o_l:
