@@ -51,10 +51,10 @@ for i, (valid_input_file, valid_output_file) in enumerate(zip(valid_input_files,
       B = np.loadtxt('/home3/srallaba/projects/siri_expts/valid_output/' + valid_output_file) 
       o_l = len(B)
       if i_l == o_l:
-         g.write(valid_output_file.split('.')[0] + '\n')
+         g.write(valid_input_file.split('.')[0] + '\n')
          valid_input.append(A)
          valid_output.append(B)
-         valid_files.append(valid_output_file)
+         valid_files.append(valid_input_file)
 g.close()
 
 # Load the training data
