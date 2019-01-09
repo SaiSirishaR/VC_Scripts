@@ -6,8 +6,8 @@ import os
 
 
 
-source_folder='/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/VC_scripts/log_f0/'
-new_folder = '/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/VC_scripts/modified_log_f0/'
+source_folder='/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/Project_independent_vc/expt_2jan_2019/jan6_expts/ss_dnn/data/VC_reconstruction/src_log_f0/'
+new_folder = '/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/Project_independent_vc/expt_2jan_2019/jan6_expts/ss_dnn/data/VC_reconstruction/modified_log_f0/'
 k = 0
 os.chdir(source_folder)
 files = sorted(os.listdir('.'))
@@ -21,7 +21,7 @@ for file in files:
    line = line.split('\n')[0].strip(' ')
    src.append(line)
 
- src_file = open('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/VC_scripts/src_file.txt')
+ src_file = open('/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/Project_independent_vc/expt_2jan_2019/jan6_expts/ss_dnn/data/VC_reconstruction/src_log_f0.txt')
 
  source = []
 
@@ -29,7 +29,7 @@ for file in files:
     line = line.split('\n')[0].strip(' ')
     source.append(line)
 
- f_tgt = open('/home3/srallaba/projects/siri_expts/merlin/egs/voice_conversion/s2/chinese/feats/VC_scripts/all_log_f0.txt')
+ f_tgt = open('/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/Project_independent_vc/expt_2jan_2019/jan6_expts/ss_dnn/data/VC_reconstruction/tgt_log_f0.txt')
 
  tgt = []
 
@@ -58,3 +58,4 @@ for file in files:
  #  print("i is..", i, "new_fo is", new_f0)
    g.write(str(new_f0) + '\n')
  g.close()
+

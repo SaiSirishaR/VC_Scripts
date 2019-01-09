@@ -1,0 +1,14 @@
+#!/bin/bash
+folder1="/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/7apr_expts/data/predicted/"
+folder2="/home/siri/Documents/Projects/Project_Lombard_effect/parallel_VC_data/VC_reconstruction/test"
+folder3="/home/siri/Documents/Projects/NUS_projects/vc_arctic_data/7apr_expts/data/clb"
+#mkdir $new_folder
+cd $folder1
+for file in *;
+do
+          echo $file
+          fbname=$(basename "$file" .coeffs)          
+          cp -r  $folder2/$fbname.wav $folder3/$fbname.wav
+ 
+done
+
